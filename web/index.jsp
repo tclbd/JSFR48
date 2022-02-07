@@ -11,10 +11,15 @@
     <body>
         <h1>Hello World!</h1> <br>
         <f:view>
-            <h:form>
+            <h:form enctype="multipart/form-data"> 
                 Name <h:inputText value="#{person.name}"/> <br>
                 Age  <h:inputText value="#{person.age}"/> <br>
-                <h:commandButton value="Register" action="submit"/>
+                <h:inputFile value="#{person.file}"/>
+                <h:commandLink value="Register" action="#{person.reset}">
+                    <f:param name="hello" value="Hello World!"/>
+                    <f:param name="hello2" value="Hello World!2"/>
+                    <f:param name="hello3" value="Hello World!3"/>
+                </h:commandLink>
             </h:form>
         </f:view>
     </body>

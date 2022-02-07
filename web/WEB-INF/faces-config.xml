@@ -10,18 +10,20 @@
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>  
     
-    <navigation-rule>
+<!--    <navigation-rule>
         <from-view-id>/index.jsp</from-view-id>
         <navigation-case>
-            <from-outcome>submit</from-outcome>
+            <from-action>#{person.reset}</from-action>
+            <from-outcome>success</from-outcome>
             <to-view-id>/new.jsp</to-view-id>
             <redirect/>
         </navigation-case>
-          <navigation-case>
-            <from-outcome>submit2</from-outcome>
-            <to-view-id>/new2.jsp</to-view-id>
+        <navigation-case>
+            <from-action>#{person.reset}</from-action>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/test.jsp</to-view-id>
             <redirect/>
         </navigation-case>
-    </navigation-rule>  
+    </navigation-rule>  -->
 </faces-config>
 
